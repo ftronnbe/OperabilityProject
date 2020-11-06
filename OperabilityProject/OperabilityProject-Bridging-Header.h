@@ -4,4 +4,5 @@
 
 #import "MyObjcClass.h"
 
+// Must be imported explicitly to avoid warning
 #import "StaticLibraryOperability-Bridging-Header.h"
