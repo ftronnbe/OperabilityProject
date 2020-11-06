@@ -12,6 +12,11 @@
 
 @implementation MyObjcClass
 
+/// MARK: Static library
+
+
+/// MARK: Dynamic framework
+
 - (void)createObjectiveCObjectFromDynamicFramework
 {
     MyDynamicFrameworkObjcClass *objcObject = [[MyDynamicFrameworkObjcClass alloc] init];
@@ -23,6 +28,8 @@
     MyDynamicFrameworkSwiftClass *swiftObject = [[MyDynamicFrameworkSwiftClass alloc] init];
     [swiftObject logFromObjectiveCMainTarget];
 }
+
+/// MARK: Same target
 
 - (void)createSwiftObject
 {

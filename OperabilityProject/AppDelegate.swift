@@ -7,6 +7,7 @@
 
 import UIKit
 import DynamicFrameworkOperability
+import StaticLibraryOperability
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // An Objective-C class used in an Objective-C class in the main target.
         myObjcObject.createObjectiveCObjectFromDynamicFramework()
 
+        /// MARK: Static library operability
+
+        // An objective-C class declared in a static library used in Swift in the main target
+        let myStaticLibraryObjcObject = MyStaticLibraryObjcClass()
+        myStaticLibraryObjcObject.logFromMainTargetSwift()
+
+        // A swift class declared in a dynamic framework used in Swift in main target
+        let myStaticLibrarySwiftObject = MyStaticLibrarySwiftClass()
+        myStaticLibrarySwiftObject.logFromSwiftMainTarget()
         
         return true
     }

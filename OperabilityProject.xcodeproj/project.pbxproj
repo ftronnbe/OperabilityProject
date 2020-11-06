@@ -21,6 +21,9 @@
 		7931254425554F2A004D1D28 /* MyDynamicFrameworkSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7931254325554F2A004D1D28 /* MyDynamicFrameworkSwiftClass.swift */; };
 		7931254925554F41004D1D28 /* MyDynamicFrameworkObjcClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7931254725554F41004D1D28 /* MyDynamicFrameworkObjcClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7931254A25554F41004D1D28 /* MyDynamicFrameworkObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7931254825554F41004D1D28 /* MyDynamicFrameworkObjcClass.m */; };
+		793125552555525E004D1D28 /* MyStaticLibrarySwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793125542555525E004D1D28 /* MyStaticLibrarySwiftClass.swift */; };
+		7931255E25555273004D1D28 /* libStaticLibraryOperability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 793125522555525E004D1D28 /* libStaticLibraryOperability.a */; };
+		79312564255552E6004D1D28 /* MyStaticLibraryObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 79312563255552E6004D1D28 /* MyStaticLibraryObjcClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7931253425554F15004D1D28;
 			remoteInfo = DynamicFrameworkOperability;
+		};
+		7931255B2555526E004D1D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7931250425554B4B004D1D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 793125512555525E004D1D28;
+			remoteInfo = StaticLibraryOperability;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,6 +53,15 @@
 				7931253D25554F15004D1D28 /* DynamicFrameworkOperability.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793125502555525E004D1D28 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -66,6 +85,11 @@
 		7931254325554F2A004D1D28 /* MyDynamicFrameworkSwiftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDynamicFrameworkSwiftClass.swift; sourceTree = "<group>"; };
 		7931254725554F41004D1D28 /* MyDynamicFrameworkObjcClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDynamicFrameworkObjcClass.h; sourceTree = "<group>"; };
 		7931254825554F41004D1D28 /* MyDynamicFrameworkObjcClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDynamicFrameworkObjcClass.m; sourceTree = "<group>"; };
+		793125522555525E004D1D28 /* libStaticLibraryOperability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticLibraryOperability.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		793125542555525E004D1D28 /* MyStaticLibrarySwiftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStaticLibrarySwiftClass.swift; sourceTree = "<group>"; };
+		79312561255552E6004D1D28 /* StaticLibraryOperability-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaticLibraryOperability-Bridging-Header.h"; sourceTree = "<group>"; };
+		79312562255552E6004D1D28 /* MyStaticLibraryObjcClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStaticLibraryObjcClass.h; sourceTree = "<group>"; };
+		79312563255552E6004D1D28 /* MyStaticLibraryObjcClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStaticLibraryObjcClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +97,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7931255E25555273004D1D28 /* libStaticLibraryOperability.a in Frameworks */,
 				7931253C25554F15004D1D28 /* DynamicFrameworkOperability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7931253225554F15004D1D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7931254F2555525E004D1D28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,7 +124,9 @@
 			children = (
 				7931250E25554B4B004D1D28 /* OperabilityProject */,
 				7931253625554F15004D1D28 /* DynamicFrameworkOperability */,
+				793125532555525E004D1D28 /* StaticLibraryOperability */,
 				7931250D25554B4B004D1D28 /* Products */,
+				7931255D25555273004D1D28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +135,7 @@
 			children = (
 				7931250C25554B4B004D1D28 /* OperabilityProject.app */,
 				7931253525554F15004D1D28 /* DynamicFrameworkOperability.framework */,
+				793125522555525E004D1D28 /* libStaticLibraryOperability.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +178,24 @@
 			path = DynamicFrameworkOperability;
 			sourceTree = "<group>";
 		};
+		793125532555525E004D1D28 /* StaticLibraryOperability */ = {
+			isa = PBXGroup;
+			children = (
+				793125542555525E004D1D28 /* MyStaticLibrarySwiftClass.swift */,
+				79312562255552E6004D1D28 /* MyStaticLibraryObjcClass.h */,
+				79312563255552E6004D1D28 /* MyStaticLibraryObjcClass.m */,
+				79312561255552E6004D1D28 /* StaticLibraryOperability-Bridging-Header.h */,
+			);
+			path = StaticLibraryOperability;
+			sourceTree = "<group>";
+		};
+		7931255D25555273004D1D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -170,6 +223,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7931255C2555526E004D1D28 /* PBXTargetDependency */,
 				7931253B25554F15004D1D28 /* PBXTargetDependency */,
 			);
 			name = OperabilityProject;
@@ -195,6 +249,23 @@
 			productReference = 7931253525554F15004D1D28 /* DynamicFrameworkOperability.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		793125512555525E004D1D28 /* StaticLibraryOperability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793125562555525E004D1D28 /* Build configuration list for PBXNativeTarget "StaticLibraryOperability" */;
+			buildPhases = (
+				7931254E2555525E004D1D28 /* Sources */,
+				7931254F2555525E004D1D28 /* Frameworks */,
+				793125502555525E004D1D28 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticLibraryOperability;
+			productName = StaticLibraryOperability;
+			productReference = 793125522555525E004D1D28 /* libStaticLibraryOperability.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,6 +280,10 @@
 						LastSwiftMigration = 1210;
 					};
 					7931253425554F15004D1D28 = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+					};
+					793125512555525E004D1D28 = {
 						CreatedOnToolsVersion = 12.1;
 						LastSwiftMigration = 1210;
 					};
@@ -229,6 +304,7 @@
 			targets = (
 				7931250B25554B4B004D1D28 /* OperabilityProject */,
 				7931253425554F15004D1D28 /* DynamicFrameworkOperability */,
+				793125512555525E004D1D28 /* StaticLibraryOperability */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +351,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7931254E2555525E004D1D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79312564255552E6004D1D28 /* MyStaticLibraryObjcClass.m in Sources */,
+				793125552555525E004D1D28 /* MyStaticLibrarySwiftClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -282,6 +367,11 @@
 			isa = PBXTargetDependency;
 			target = 7931253425554F15004D1D28 /* DynamicFrameworkOperability */;
 			targetProxy = 7931253A25554F15004D1D28 /* PBXContainerItemProxy */;
+		};
+		7931255C2555526E004D1D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 793125512555525E004D1D28 /* StaticLibraryOperability */;
+			targetProxy = 7931255B2555526E004D1D28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -519,6 +609,45 @@
 			};
 			name = Release;
 		};
+		793125572555525E004D1D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StaticLibraryOperability/StaticLibraryOperability-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		793125582555525E004D1D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StaticLibraryOperability/StaticLibraryOperability-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,6 +674,15 @@
 			buildConfigurations = (
 				7931253F25554F15004D1D28 /* Debug */,
 				7931254025554F15004D1D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		793125562555525E004D1D28 /* Build configuration list for PBXNativeTarget "StaticLibraryOperability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793125572555525E004D1D28 /* Debug */,
+				793125582555525E004D1D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
