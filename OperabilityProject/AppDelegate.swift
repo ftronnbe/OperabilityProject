@@ -45,10 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myStaticLibraryObjcObject = MyStaticLibraryObjcClass()
         myStaticLibraryObjcObject.logFromMainTargetSwift()
 
-        // A swift class declared in a dynamic framework used in Swift in main target
+        // A swift class declared in a static library used in Swift in main target
         let myStaticLibrarySwiftObject = MyStaticLibrarySwiftClass()
         myStaticLibrarySwiftObject.logFromSwiftMainTarget()
-        
+
+        myObjcObject.createObjectiveCObjectFromStaticLibrary()
+
+        myObjcObject.createSwiftObjectFromStaticLibrary()
+
         return true
     }
 

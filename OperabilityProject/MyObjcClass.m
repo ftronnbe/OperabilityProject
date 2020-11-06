@@ -7,6 +7,13 @@
 
 #import "MyObjcClass.h"
 #import "OperabilityProject-Swift.h"
+#import "MyStaticLibraryObjcClass.h"
+
+// This file cannot be found
+//#import "StaticLibraryOperability-Swift.h"
+
+// This module cannot be found.
+//@import StaticLibraryOperability;
 
 @import DynamicFrameworkOperability;
 
@@ -14,7 +21,20 @@
 
 /// MARK: Static library
 
-// TODO: Add stuff.
+- (void)createObjectiveCObjectFromStaticLibrary
+{
+    MyStaticLibraryObjcClass *objcObject = [[MyStaticLibraryObjcClass alloc] init];
+    [objcObject logFromMainTargetInObjectiveC];
+}
+
+- (void)createSwiftObjectFromStaticLibrary
+{
+#warning "How to make this work?"
+    // Swift declared in static library not reachable in main target...
+
+//    MyStaticLibrarySwiftClass *swiftObject = [[MyStaticLibrarySwiftClass alloc] init];
+//    [swiftObject logFromObjectiveCMainTarget];
+}
 
 /// MARK: Dynamic framework
 

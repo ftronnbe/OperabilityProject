@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StaticLibraryOperability
 
 @objc
 class MySwiftClass: NSObject {
