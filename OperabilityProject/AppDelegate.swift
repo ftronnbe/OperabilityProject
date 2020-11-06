@@ -13,7 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // An Objective-C declared class used in Swift.
+        let myObjcObject = MyObjcClass()
+        print(myObjcObject.description)
+
+        // Create a swift object in Objective-C
+        myObjcObject.createSwiftObject()
+
         return true
     }
 
