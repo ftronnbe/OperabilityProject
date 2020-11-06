@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import DynamicFrameworkOperability
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        /// MARK: Same target operability
 
         // An Objective-C declared class used in Swift.
         let myObjcObject = MyObjcClass()
@@ -21,6 +22,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create a swift object in Objective-C
         myObjcObject.createSwiftObject()
 
+        /// MARK: Dynamic framework operability
+
+        // An objective-C class declared in a dynamic framework used in Swift in the main target
+        let myDynamicFrameworkObjcObject = MyDynamicFrameworkObjcClass()
+        myDynamicFrameworkObjcObject.logFromMainTargetSwift()
+
+        // A swift class declared in a dynamic framework used in Swift in main target
+        let myDynamicFrameworkSwiftObject = MyDynamicFrameworkSwiftClass()
+        myDynamicFrameworkSwiftObject.logFromSwiftMainTarget()
+
+        // A swift class in the dynamic framework used in Objective-C
+        myObjcObject.createSwiftObjectFromDynamicFramework()
+
+        // An Objective-C class used in an Objective-C class in the main target.
+        myObjcObject.createObjectiveCObjectFromDynamicFramework()
+
+        
         return true
     }
 

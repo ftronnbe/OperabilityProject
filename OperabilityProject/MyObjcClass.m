@@ -8,7 +8,21 @@
 #import "MyObjcClass.h"
 #import "OperabilityProject-Swift.h"
 
+@import DynamicFrameworkOperability;
+
 @implementation MyObjcClass
+
+- (void)createObjectiveCObjectFromDynamicFramework
+{
+    MyDynamicFrameworkObjcClass *objcObject = [[MyDynamicFrameworkObjcClass alloc] init];
+    [objcObject logFromMainTargetSwift];
+}
+
+- (void)createSwiftObjectFromDynamicFramework
+{
+    MyDynamicFrameworkSwiftClass *swiftObject = [[MyDynamicFrameworkSwiftClass alloc] init];
+    [swiftObject logFromObjectiveCMainTarget];
+}
 
 - (void)createSwiftObject
 {

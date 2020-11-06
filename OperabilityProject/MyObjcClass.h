@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)createSwiftObject;
 
+- (void)createSwiftObjectFromDynamicFramework;
+
+- (void)createObjectiveCObjectFromDynamicFramework;
+
 @end
 
 NS_ASSUME_NONNULL_END
